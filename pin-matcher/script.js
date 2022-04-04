@@ -29,3 +29,19 @@ document.getElementById('key-pad').addEventListener('click', function(event){
     }
    
 })
+
+function verifyPin() {
+    const pin = document.getElementById('display-pin').value;
+    const typedNumbers = document.getElementById('typed-numbers').value;
+    const success = document.getElementById('notify-success');
+    const fail = document.getElementById('notify-fail');
+    if(pin == typedNumbers){
+       
+       success.style.display = 'block'
+       fail.style.display = 'none'
+    } else {
+        
+        fail.style.display = 'block'
+        success.style.display = 'none'
+    }
+}
